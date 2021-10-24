@@ -14,3 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->post('/api/transactions', 'TransactionController@insert');
+$router->get('/api/transactions', 'TransactionController@getAll');
